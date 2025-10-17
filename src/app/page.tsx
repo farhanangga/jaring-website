@@ -100,12 +100,12 @@ export default function Home() {
       <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-62 pt-62 px-4">
         <div className="absolute inset-0 "></div>
         <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-4">
+          <h2 className="text-3xl md:text-5xl font-semibold mb-2">
             Commitment, Integrity, Future
           </h2>
-          <p className="text-xl md:text-2xl mb-4">
+          <h2 className="text-xl md:text-2xl mb-4">
             Kami Berbicara Tentang Digital di Masa Depan
-          </p>
+          </h2>
           <p className="text-lg font-medium mb-8">
             PT JARING SOLUSI APLIKASI (NET2SOFTWARE)
           </p>
@@ -118,10 +118,23 @@ export default function Home() {
             </button>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+          <svg
+            className="relative block w-full h-[100px] md:h-[120px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39 56.44C161.39 80.44 0 0 0 0v120h1200V0s-179.06 65.19-340 39.44c-160.94-25.75-320-60-538.61 17z"
+              className="fill-white"
+            ></path>
+          </svg>
+        </div>
       </div>
 
       {/* SOFTWARE HOUSE */}
-      <div className="relative z-20 -my-32 flex justify-center">
+      <div className="relative z-20 -mt-32 -mb-20 flex justify-center">
         <div className="bg-white flex flex-col md:flex-row items-center md:space-x-10 max-w-6xl p-10 md:p-16 rounded-2xl shadow-lg">
           {/* Gambar */}
           <div className="flex justify-center md:w-1/2">
@@ -156,9 +169,9 @@ export default function Home() {
       </div>
 
       {/* MODEL BISNIS */}
-      <div className="relative bg-[#0C2D6B] bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white pt-60  pb-28 px-6 overflow-hidden">
+      <div className="relative bg-[#196CB4] bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white pt-60  pb-28 px-6 overflow-hidden">
         {/* Overlay agar teks tetap jelas */}
-        <div className="absolute inset-0 bg-[#0C2D6B]/80"></div>
+        <div className="absolute inset-0 bg-[#196CB4]/80"></div>
 
         <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-start md:space-x-10">
           {/* KIRI - Judul */}
@@ -260,7 +273,7 @@ export default function Home() {
       </div>
 
       {/* Sertification */}
-      <div className="py-20 bg-gradient-to-b from-[#EAF0FF] to-white text-center">
+      <div className="py-20 bg-[#E9F3F9] text-center">
         <h1 className="text-3xl font-bold mb-6">Sertifikasi</h1>
         <div className="flex justify-center gap-8 flex-wrap">
           <Image src="/img/icons/brd-iso-1.png" alt="ISO" width={120} height={120} />
@@ -279,7 +292,7 @@ export default function Home() {
         {/* Wrapper dengan rasio berbeda */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[40%_60%] rounded-lg overflow-hidden">
           {/* LEFT CONTACT INFO */}
-          <div className="bg-[#0C2D6B] text-white p-6 space-y-6">
+          <div className="bg-[#196CB4] text-white p-6 space-y-6">
             {/* Alamat */}
             <div className="bg-white/10 p-4 rounded-lg flex items-center gap-4">
               <div className="bg-white/20 p-3 rounded-full flex items-center justify-center">
@@ -360,7 +373,7 @@ export default function Home() {
 
 
       {/* FOOTER */}
-      <footer className="bg-[#0C2D6B] text-white py-10 px-6">
+      <footer className="bg-[#196CB4] text-white py-10 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 mb-6">
           <div>
             <h1 className="font-bold text-lg mb-2">PT. JARING SOLUSI APLIKASI</h1>
@@ -376,10 +389,10 @@ export default function Home() {
           <div>
             <h1 className="font-bold text-lg mb-2">Media Sosial</h1>
             <div className="flex space-x-4">
-              <Image src="/fb.png" alt="Facebook" width={30} height={30} />
-              <Image src="/ig.png" alt="Instagram" width={30} height={30} />
-              <Image src="/yt.png" alt="YouTube" width={30} height={30} />
-              <Image src="/x.png" alt="X" width={30} height={30} />
+              <Image src="/img/icons/ft-1-fb.png" alt="Facebook" width={30} height={30} />
+              <Image src="/img/icons/ft-2-ig.png" alt="Instagram" width={30} height={30} />
+              <Image src="/img/icons/ft-3-x.png" alt="X" width={30} height={30} />
+              <Image src="/img/icons/ft-4-yt.png" alt="Youtube" width={30} height={30} />
             </div>
           </div>
         </div>
