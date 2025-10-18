@@ -29,72 +29,72 @@ export default function Home() {
     <div className="font-sans bg-white text-gray-800">
       {/* NAVBAR */}
       <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white shadow-md text-black"
-          : "bg-gradient-to-r from-[#201A36]/70 to-[#201A36] text-white"
-      }`}
-    >
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-10 py-4">
-        {/* LOGO */}
-        <div className="flex items-center">
-          <Image
-            src="/img/logo.png"
-            alt="Logo"
-            width={130}
-            height={40}
-            className="object-contain"
-          />
-        </div>
-
-        {/* MENU DESKTOP */}
-        <ul className="hidden md:flex space-x-8 font-medium">
-          <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
-            Beranda
-          </li>
-          <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
-            Tentang Kami
-          </li>
-          <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
-            Layanan Kami
-          </li>
-          <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
-            Kontak Kami
-          </li>
-        </ul>
-
-        {/* HAMBURGER MENU (MOBILE) */}
-        <div className="md:hidden">
-          {menuOpen ? (
-            <X
-              size={28}
-              className="cursor-pointer"
-              onClick={() => setMenuOpen(false)}
-            />
-          ) : (
-            <Menu
-              size={28}
-              className="cursor-pointer"
-              onClick={() => setMenuOpen(true)}
-            />
-          )}
-        </div>
-      </div>
-
-      {/* DROPDOWN MENU MOBILE */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ${
-          menuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-        } ${scrolled ? "bg-white text-black" : "bg-[#0C0C47]/90 text-white"}`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+          scrolled
+            ? "bg-white shadow-md text-black"
+            : "bg-gradient-to-r from-[#201A36]/70 to-[#201A36] text-white"
+        }`}
       >
-        <ul className="flex flex-col space-y-4 px-6 py-4 font-medium">
-          <li className="hover:text-orange-500 cursor-pointer">Beranda</li>
-          <li className="hover:text-orange-500 cursor-pointer">Tentang Kami</li>
-          <li className="hover:text-orange-500 cursor-pointer">Layanan Kami</li>
-          <li className="hover:text-orange-500 cursor-pointer">Kontak Kami</li>
-        </ul>
-      </div>
-    </nav>
+        <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 sm:py-3 md:py-4">
+          {/* LOGO */}
+          <div className="flex items-center">
+            <Image
+              src="/img/logo.png"
+              alt="Logo"
+              width={100} // default mobile
+              height={30}
+              className="object-contain sm:w-[110px] md:w-[130px]" // naik di layar besar
+            />
+          </div>
+
+          {/* MENU DESKTOP */}
+          <ul className="hidden md:flex space-x-8 font-medium">
+            <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
+              Beranda
+            </li>
+            <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
+              Tentang Kami
+            </li>
+            <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
+              Layanan Kami
+            </li>
+            <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
+              Kontak Kami
+            </li>
+          </ul>
+
+          {/* HAMBURGER MENU (MOBILE) */}
+          <div className="md:hidden">
+            {menuOpen ? (
+              <X
+                size={26}
+                className="cursor-pointer"
+                onClick={() => setMenuOpen(false)}
+              />
+            ) : (
+              <Menu
+                size={26}
+                className="cursor-pointer"
+                onClick={() => setMenuOpen(true)}
+              />
+            )}
+          </div>
+        </div>
+
+        {/* DROPDOWN MENU MOBILE */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-500 ${
+            menuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+          } ${scrolled ? "bg-white text-black" : "bg-[#201A36]/90 text-white"}`}
+        >
+          <ul className="flex flex-col space-y-3 px-4 sm:px-6 py-3 font-medium text-sm sm:text-base">
+            <li className="hover:text-orange-500 cursor-pointer">Beranda</li>
+            <li className="hover:text-orange-500 cursor-pointer">Tentang Kami</li>
+            <li className="hover:text-orange-500 cursor-pointer">Layanan Kami</li>
+            <li className="hover:text-orange-500 cursor-pointer">Kontak Kami</li>
+          </ul>
+        </div>
+      </nav>
 
       {/* HERO / HEAD */}
       <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-62 pt-62 px-4">
