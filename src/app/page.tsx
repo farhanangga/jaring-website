@@ -3,8 +3,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 
 export default function Home() {
   const ourServices = [
