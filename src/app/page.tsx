@@ -1,5 +1,7 @@
 "use client";
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -15,95 +17,19 @@ export default function Home() {
     { icon: "/img/icons/brd-os-7.png", names: "RETAIL SOLUTION" },
   ];
     
-    const [scrolled, setScrolled] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    useEffect(() => {
-      const handleScroll = () => {
-        setScrolled(window.scrollY > 50); // ketika scroll lebih dari 50px ubah warna navbar
-      };
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
   return (
     <div className="font-sans bg-white text-gray-800">
-      {/* NAVBAR */}
-      <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-white shadow-md text-black"
-            : "bg-gradient-to-r from-[#201A36]/70 to-[#201A36] text-white"
-        }`}
-      >
-        <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 sm:py-3 md:py-4">
-          {/* LOGO */}
-          <div className="flex items-center">
-            <Image
-              src="/img/logo.png"
-              alt="Logo"
-              width={100} // default mobile
-              height={30}
-              className="object-contain sm:w-[110px] md:w-[130px]" // naik di layar besar
-            />
-          </div>
-
-          {/* MENU DESKTOP */}
-          <ul className="hidden md:flex space-x-8 font-medium">
-            <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
-              Beranda
-            </li>
-            <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
-              Tentang Kami
-            </li>
-            <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
-              Layanan Kami
-            </li>
-            <li className="hover:text-orange-500 transition-all duration-200 cursor-pointer">
-              Kontak Kami
-            </li>
-          </ul>
-
-          {/* HAMBURGER MENU (MOBILE) */}
-          <div className="md:hidden">
-            {menuOpen ? (
-              <X
-                size={26}
-                className="cursor-pointer"
-                onClick={() => setMenuOpen(false)}
-              />
-            ) : (
-              <Menu
-                size={26}
-                className="cursor-pointer"
-                onClick={() => setMenuOpen(true)}
-              />
-            )}
-          </div>
-        </div>
-
-        {/* DROPDOWN MENU MOBILE */}
-        <div
-          className={`md:hidden overflow-hidden transition-all duration-500 ${
-            menuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-          } ${scrolled ? "bg-white text-black" : "bg-[#201A36]/90 text-white"}`}
-        >
-          <ul className="flex flex-col space-y-3 px-4 sm:px-6 py-3 font-medium text-sm sm:text-base">
-            <li className="hover:text-orange-500 cursor-pointer">Beranda</li>
-            <li className="hover:text-orange-500 cursor-pointer">Tentang Kami</li>
-            <li className="hover:text-orange-500 cursor-pointer">Layanan Kami</li>
-            <li className="hover:text-orange-500 cursor-pointer">Kontak Kami</li>
-          </ul>
-        </div>
-      </nav>
+      
+      <Navbar/>
 
       {/* HERO / HEAD */}
-      <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-62 pt-62 px-4">
+      <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-62 pt-52 px-4">
         <div className="absolute inset-0 "></div>
         <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-2">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-2">
             Commitment, Integrity, Future
           </h2>
-          <h2 className="text-xl md:text-2xl mb-4">
+          <h2 className="text-2xl md:text-4xl fofnt-semibold mb-4">
             Kami Berbicara Tentang Digital di Masa Depan
           </h2>
           <p className="text-lg font-medium mb-8">
@@ -169,9 +95,9 @@ export default function Home() {
       </div>
 
       {/* MODEL BISNIS */}
-      <div className="relative bg-[#196CB4] bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white pt-60  pb-28 px-6 overflow-hidden">
+      <div className="relative bg-[#196CB4] bg-[url('/img/brd-bg-2.png')] bg-cover bg-center text-white pt-60  pb-28 px-6 overflow-hidden">
         {/* Overlay agar teks tetap jelas */}
-        <div className="absolute inset-0 bg-[#196CB4]/80"></div>
+        <div className="absolute inset-0 bg-[#196CB4]/30"></div>
 
         <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-start md:space-x-10">
           {/* KIRI - Judul */}
@@ -273,12 +199,14 @@ export default function Home() {
       </div>
 
       {/* Sertification */}
-      <div className="py-20 bg-[#E9F3F9] text-center">
-        <h1 className="text-3xl font-bold mb-6">Sertifikasi</h1>
-        <div className="flex justify-center gap-8 flex-wrap">
-          <Image src="/img/icons/brd-iso-1.png" alt="ISO" width={120} height={120} />
-          <Image src="/img/icons/brd-iso-2.png" alt="ISO" width={120} height={120} />
-          <Image src="/img/icons/brd-iso-3.png" alt="ISO" width={120} height={120} />
+      <div className="bg-[url('/img/brd-bg-2.png')] relative bg-cover bg-center overflow-hidden">
+        <div className="py-20 bg-[#E9F3F9]/10 text-center">
+          <h1 className="text-3xl font-bold mb-6">Sertifikasi</h1>
+          <div className="flex justify-center gap-8 flex-wrap">
+            <Image src="/img/icons/brd-iso-1.png" alt="ISO" width={120} height={120} />
+            <Image src="/img/icons/brd-iso-2.png" alt="ISO" width={120} height={120} />
+            <Image src="/img/icons/brd-iso-3.png" alt="ISO" width={120} height={120} />
+          </div>
         </div>
       </div>
 
@@ -371,35 +299,8 @@ export default function Home() {
         </div>
       </div>
 
-
-      {/* FOOTER */}
-      <footer className="bg-[#196CB4] text-white py-10 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 mb-6">
-          <div>
-            <h1 className="font-bold text-lg mb-2">PT. JARING SOLUSI APLIKASI</h1>
-            <p className="text-gray-300 text-sm">
-              Alamat: Jl. Ks Tubun Raya No. 10, Jakarta Pusat, Indonesia
-            </p>
-          </div>
-          <div>
-            <h1 className="font-bold text-lg mb-2">Kontak Kami</h1>
-            <p className="text-gray-300 text-sm">(021) 345 2130</p>
-            <p className="text-gray-300 text-sm">info@netzsoftware.com</p>
-          </div>
-          <div>
-            <h1 className="font-bold text-lg mb-2">Media Sosial</h1>
-            <div className="flex space-x-4">
-              <Image src="/img/icons/ft-1-fb.png" alt="Facebook" width={30} height={30} />
-              <Image src="/img/icons/ft-2-ig.png" alt="Instagram" width={30} height={30} />
-              <Image src="/img/icons/ft-3-x.png" alt="X" width={30} height={30} />
-              <Image src="/img/icons/ft-4-yt.png" alt="Youtube" width={30} height={30} />
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-gray-500 pt-4 text-center text-sm text-gray-300">
-          © 2024 PT. Jaring Solusi Aplikasi. All rights reserved.
-        </div>
-      </footer>
+      <Footer/>
+      
     </div>
   );
 }
