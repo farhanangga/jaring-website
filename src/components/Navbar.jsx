@@ -24,7 +24,7 @@ export default function Navbar() {
           : "bg-gradient-to-r from-[#201A36]/70 to-[#201A36] text-white"
       }`}
     >
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 sm:py-3 md:py-4">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 ">
         {/* LOGO */}
         <div className="flex items-center">
           <Image
@@ -32,7 +32,7 @@ export default function Navbar() {
             alt="Logo"
             width={100}
             height={30}
-            className="object-contain sm:w-[110px] md:w-[130px]"
+            className="object-contain sm:w-[110px] md:w-[110px]"
           />
         </div>
 
