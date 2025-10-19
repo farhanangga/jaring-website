@@ -58,7 +58,7 @@ export default function Home() {
       </div>
 
       {/* SOFTWARE HOUSE */}
-      <div className="relative z-20 -mt-32 -mb-20 flex justify-center">
+      <div className="relative z-20 -mt-42 -mb-20 flex justify-center">
         <div className="bg-white flex flex-col md:flex-row items-center md:space-x-10 max-w-6xl p-10 md:p-16 rounded-2xl shadow-lg">
           {/* Gambar */}
           <div className="flex justify-center md:w-1/2">
