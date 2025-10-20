@@ -42,87 +42,94 @@ export default function About() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-15 pt-35 md:pb-38 md:pt-60 px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">TENTANG KAMI</h1>
-        <p className="text-lg md:text-xl font-light">Commitment, Integrity, Future.</p>
-        <p className="text-base mt-2">Kami Berbicara Tentang Digital di Masa Depan</p>
+      <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-15 pt-30 md:pt-50 md:pb-30 px-4">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">TENTANG KAMI</h1>
+        <p className="text-base md:text-lg font-light">
+          Commitment, Integrity, Future.
+        </p>
+        <p className="text-sm md:text-base mt-2">
+          Kami Berbicara Tentang Digital di Masa Depan
+        </p>
       </div>
 
-    {/* PROFILE SECTION */}
-    <section className="relative px-6 md:px-30 py-20 overflow-hidden ">
-        {/* ICON BACKGROUND LAYER */}
-        <div className="absolute top-[-150px] left-[-100px] z-0 opacity-20 pointer-events-none">
-        <Image
-            src="/img/icons/au-bg-half-circle.png"
+      {/* PROFILE SECTION */}
+      <section className="relative px-6 md:px-20 py-16 md:py-24 overflow-hidden">
+        {/* ICON BACKGROUND */}
+        <div className="absolute top-[-100px] left-[-60px] z-0 opacity-20 pointer-events-none">
+          <Image
+            src="/img/au-bg-half-circle.png"
             alt="Background Circle"
             width={400}
             height={400}
             className="object-contain"
-        />
+          />
         </div>
 
-    {/* CONTENT */}
-    <div className="relative z-10 py-10">
-        <div className="flex flex-col justify-between space-y-10 md:space-y-0 md:flex-row md:items-center">
-        {/* LEFT SIDE */}
-            <div className="md:w-1/2">
-                <h2 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">
-                PT. JARING SOLUSI APLIKASI
-                </h2>
-                <p className="text-gray-700 leading-relaxed">
-                Didirikan di Jakarta pada awal tahun 2016 berkedudukan di Jakarta, beralamat di Jalan
-                Pintu Air IV No.25-A, Pasar Baru, Jakarta Pusat 10710.
-                </p>
-            </div>
+        {/* CONTENT */}
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-10 md:gap-20">
+          {/* LEFT */}
+          <div className="md:w-1/2">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
+              PT. JARING SOLUSI APLIKASI
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+              Didirikan di Jakarta pada awal tahun 2016 berkedudukan di Jakarta,
+              beralamat di Jalan Pintu Air IV No.25-A, Pasar Baru, Jakarta Pusat
+              10710.
+            </p>
+          </div>
 
-            {/* RIGHT SIDE */}
-            <div className="flex justify-center md:justify-end md:w-1/2">
-                <Image
-                src="/img/logo.png"
-                alt="Jaring Logo"
-                width={500}
-                height={250}
-                className="object-contain"
-                />
-            </div>
+          {/* RIGHT */}
+          <div className="md:w-1/2 flex justify-center md:justify-end">
+            <Image
+              src="/img/logo.png"
+              alt="Jaring Logo"
+              width={600}
+              height={300}
+              className="object-contain w-48 md:w-122"
+            />
+          </div>
         </div>
 
-        {/* DESCRIPTION SECTION */}
-        <div className="">
-        <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-800">
+        {/* DESCRIPTION */}
+        <div className="mt-10">
+          <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-800">
             SOFTWARE HOUSE
-        </h3>
-        <p className="mb-4 text-gray-700 leading-relaxed">
-            Berlatar belakang tim human resource dengan kualifikasi software engineering
-            mengilhami PT Jaring Solusi Aplikasi (selanjutnya disebut JARING) yang didedikasikan
-            sebagai software house bertujuan menghasilkan produk-produk aplikasi pada tataran
-            platform serta aplikasi antar muka sebagai media alat mendukung pelanggan dalam
+          </h3>
+          <p className="mb-4 text-gray-700 leading-relaxed text-sm md:text-base">
+            Berlatar belakang tim human resource dengan kualifikasi software
+            engineering mengilhami PT Jaring Solusi Aplikasi (selanjutnya disebut
+            JARING) yang didedikasikan sebagai software house bertujuan
+            menghasilkan produk-produk aplikasi pada tataran platform serta
+            aplikasi antar muka sebagai media alat mendukung pelanggan dalam
             menyelenggarakan tata kelola usaha dan komersial.
-        </p>
-        <p className="text-gray-700 leading-relaxed">
-            Karakter dunia usaha Indonesia yang sangat dinamis, keragaman serta keunikan bisnis
-            proses dalam berbagai segmen industri menjadi tantangan bagi pelaku usaha dalam
-            penerapan sistem berbasis teknologi. Diilhami oleh hal ini, JARING tampil melahirkan
-            produk sebagai keunggulan lokal menjawab tantangan implementasi teknologi aplikasi
-            mengutamakan fleksibilitas, kehandalan, dan skalabilitas.
-        </p>
+          </p>
+          <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+            Karakter dunia usaha Indonesia yang sangat dinamis, keragaman serta
+            keunikan bisnis proses dalam berbagai segmen industri menjadi
+            tantangan bagi pelaku usaha dalam penerapan sistem berbasis
+            teknologi. Diilhami oleh hal ini, JARING tampil melahirkan produk
+            sebagai keunggulan lokal menjawab tantangan implementasi teknologi
+            aplikasi mengutamakan fleksibilitas, kehandalan, dan skalabilitas.
+          </p>
         </div>
-    </div>
-    </section>
+      </section>
 
       {/* FOKUS BISNIS */}
-      <section className="bg-blue-50 py-20 px-6 md:px-20 text-center">
-        <h2 className="text-3xl font-bold mb-10 text-gray-800">FOKUS BISNIS</h2>
+      <section className="bg-[#E2F1FF] py-16 md:py-24 px-6 md:px-20 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-10 text-gray-800">
+          FOKUS BISNIS
+        </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {fokusBisnis.map((item, index) => (
             <div
               key={index}
-              className="bg-white shadow-md p-6 rounded-lg flex flex-col w-90 
-                        transition-all duration-300 transform hover:scale-105 hover:shadow-xl group text-left"
+              className="bg-white shadow-md p-6 rounded-lg flex flex-col 
+                         transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-left"
             >
-                <div className="relative w-16 h-16 flex items-center justify-center">
-                <div className="absolute bg-gray-100 w-10 h-10 rounded-full z-10 top-1 left-7" />
+              <div className="relative w-16 h-16 mb-4 flex items-center justify-center">
+                <div className="absolute bg-[#E2F1FF] w-10 h-10 rounded-full z-0 top-1 left-7" />
                 <Image
                   src={item.icon}
                   alt={item.title}
@@ -130,15 +137,18 @@ export default function About() {
                   height={40}
                   className="relative z-10"
                 />
-                </div>
-              <h3 className="text-lg font-bold mb-2 text-gray-800">{item.title}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+              </div>
+              <h3 className="text-lg font-bold mb-2 text-gray-800">
+                {item.title}
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* FOOTER */}
       <Footer />
     </div>
   );

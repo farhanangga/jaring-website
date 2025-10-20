@@ -90,19 +90,19 @@ export default function Navbar() {
             Beranda
           </li>
           <li
-            className={getLinkClass("/aboutUs/")}
+            className={getLinkClass("/aboutUs")}
             onClick={() => handleNavigate("/aboutUs/")}
           >
             Tentang Kami
           </li>
           <li
-            className={getLinkClass("/ourServices/")}
+            className={getLinkClass("/ourServices")}
             onClick={() => handleNavigate("/ourServices/")}
           >
             Layanan Kami
           </li>
           <li
-            className={getLinkClass("/contactUs/")}
+            className={getLinkClass("/contactUs")}
             onClick={() => handleNavigate("/contactUs/")}
           >
             Kontak Kami
