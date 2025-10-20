@@ -94,7 +94,7 @@ const [openService, setOpenService] = useState<number | null>(null);
       <Navbar />
 
       {/* HERO */}
-      <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-15 pt-38 md:pb-38 md:pt-52 px-4">
+      <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-15 pt-38 md:pb-38 md:pt-60 px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">LAYANAN KAMI</h1>
       </div>
 

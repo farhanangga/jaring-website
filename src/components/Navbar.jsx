@@ -3,14 +3,14 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname(); // 🔥 ambil path halaman saat ini
+  const pathname = usePathname();
+  const router = useRouter(); // 👉 hook router
 
-  // cek apakah sedang di halaman utama
   const isHome = pathname === "/";
 
   useEffect(() => {
@@ -24,12 +24,10 @@ export default function Navbar() {
   // ======================================
   const navBgClass = (() => {
     if (isHome) {
-      // Jika di halaman utama
       if (scrolled) return "bg-white shadow-md text-black";
       if (menuOpen) return "bg-[#201A36] text-white";
       return "bg-gradient-to-r from-[#201A36]/70 to-[#201A36] text-white";
     } else {
-      // Jika di halaman lain
       if (scrolled) return "bg-white shadow-md text-black";
       return "bg-white text-black";
     }
@@ -39,19 +37,30 @@ export default function Navbar() {
     if (isHome) {
       return scrolled
         ? "bg-white text-black"
-        : "bg-[#201A36] text-white"; // tanpa gradasi di mobile
+        : "bg-[#201A36] text-white";
     } else {
       return "bg-white text-black";
     }
   })();
 
+  // ======================================
+  // 🧭 HANDLER ROUTE
+  // ======================================
+  const handleNavigate = (path) => {
+    router.push(path);
+    setMenuOpen(false); // tutup menu mobile setelah klik
+  };
+
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${navBgClass}`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all shadow-md duration-500 ${navBgClass}`}
     >
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2">
         {/* LOGO */}
-        <div className="flex items-center">
+        <div
+          className="flex items-center cursor-pointer"
+          onClick={() => handleNavigate("/")}
+        >
           <Image
             src="/img/logo.png"
             alt="Logo"
@@ -63,10 +72,30 @@ export default function Navbar() {
 
         {/* MENU DESKTOP */}
         <ul className="hidden md:flex space-x-8 font-medium">
-          <li className="hover:text-orange-500 cursor-pointer">Beranda</li>
-          <li className="hover:text-orange-500 cursor-pointer">Tentang Kami</li>
-          <li className="hover:text-orange-500 cursor-pointer">Layanan Kami</li>
-          <li className="hover:text-orange-500 cursor-pointer">Kontak Kami</li>
+          <li
+            className="hover:text-orange-500 cursor-pointer"
+            onClick={() => handleNavigate("/")}
+          >
+            Beranda
+          </li>
+          <li
+            className="hover:text-orange-500 cursor-pointer"
+            onClick={() => handleNavigate("/aboutUs/")}
+          >
+            Tentang Kami
+          </li>
+          <li
+            className="hover:text-orange-500 cursor-pointer"
+            onClick={() => handleNavigate("/ourServices/")}
+          >
+            Layanan Kami
+          </li>
+          <li
+            className="hover:text-orange-500 cursor-pointer"
+            onClick={() => handleNavigate("/contactUs/")}
+          >
+            Kontak Kami
+          </li>
         </ul>
 
         {/* HAMBURGER */}
@@ -96,10 +125,30 @@ export default function Navbar() {
         }`}
       >
         <ul className="flex flex-col space-y-3 px-4 sm:px-6 py-3 font-medium text-sm sm:text-base">
-          <li className="hover:text-orange-500 py-2 cursor-pointer">Beranda</li>
-          <li className="hover:text-orange-500 py-2 cursor-pointer">Tentang Kami</li>
-          <li className="hover:text-orange-500 py-2 cursor-pointer">Layanan Kami</li>
-          <li className="hover:text-orange-500 py-2 cursor-pointer">Kontak Kami</li>
+          <li
+            className="hover:text-orange-500 py-2 cursor-pointer"
+            onClick={() => handleNavigate("/")}
+          >
+            Beranda
+          </li>
+          <li
+            className="hover:text-orange-500 py-2 cursor-pointer"
+            onClick={() => handleNavigate("/aboutUs/")}
+          >
+            Tentang Kami
+          </li>
+          <li
+            className="hover:text-orange-500 py-2 cursor-pointer"
+            onClick={() => handleNavigate("/ourServices/")}
+          >
+            Layanan Kami
+          </li>
+          <li
+            className="hover:text-orange-500 py-2 cursor-pointer"
+            onClick={() => handleNavigate("/contactUs/")}
+          >
+            Kontak Kami
+          </li>
         </ul>
       </div>
     </nav>
