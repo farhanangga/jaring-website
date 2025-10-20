@@ -9,7 +9,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter(); // 👉 hook router
+  const router = useRouter();
 
   const isHome = pathname === "/";
 
@@ -35,9 +35,7 @@ export default function Navbar() {
 
   const mobileMenuBgClass = (() => {
     if (isHome) {
-      return scrolled
-        ? "bg-white text-black"
-        : "bg-[#201A36] text-white";
+      return scrolled ? "bg-white text-black" : "bg-[#201A36] text-white";
     } else {
       return "bg-white text-black";
     }
@@ -48,7 +46,20 @@ export default function Navbar() {
   // ======================================
   const handleNavigate = (path) => {
     router.push(path);
-    setMenuOpen(false); // tutup menu mobile setelah klik
+    setMenuOpen(false);
+  };
+
+  // ======================================
+  // ✨ STYLE AKTIF
+  // ======================================
+  const getLinkClass = (path) => {
+    const isActive = pathname === path;
+    if (path === "/" && isHome) return "cursor-pointer hover:text-orange-500"; // beranda tanpa border
+    return `cursor-pointer hover:text-orange-500 ${
+      isActive
+        ? "text-orange-500 border-b-2 border-orange-500 pb-1"
+        : "border-b-2 border-transparent pb-1"
+    }`;
   };
 
   return (
@@ -73,25 +84,25 @@ export default function Navbar() {
         {/* MENU DESKTOP */}
         <ul className="hidden md:flex space-x-8 font-medium">
           <li
-            className="hover:text-orange-500 cursor-pointer"
+            className={getLinkClass("/")}
             onClick={() => handleNavigate("/")}
           >
             Beranda
           </li>
           <li
-            className="hover:text-orange-500 cursor-pointer"
+            className={getLinkClass("/aboutUs/")}
             onClick={() => handleNavigate("/aboutUs/")}
           >
             Tentang Kami
           </li>
           <li
-            className="hover:text-orange-500 cursor-pointer"
+            className={getLinkClass("/ourServices/")}
             onClick={() => handleNavigate("/ourServices/")}
           >
             Layanan Kami
           </li>
           <li
-            className="hover:text-orange-500 cursor-pointer"
+            className={getLinkClass("/contactUs/")}
             onClick={() => handleNavigate("/contactUs/")}
           >
             Kontak Kami
@@ -126,25 +137,25 @@ export default function Navbar() {
       >
         <ul className="flex flex-col space-y-3 px-4 sm:px-6 py-3 font-medium text-sm sm:text-base">
           <li
-            className="hover:text-orange-500 py-2 cursor-pointer"
+            className={getLinkClass("/")}
             onClick={() => handleNavigate("/")}
           >
             Beranda
           </li>
           <li
-            className="hover:text-orange-500 py-2 cursor-pointer"
+            className={getLinkClass("/aboutUs/")}
             onClick={() => handleNavigate("/aboutUs/")}
           >
             Tentang Kami
           </li>
           <li
-            className="hover:text-orange-500 py-2 cursor-pointer"
+            className={getLinkClass("/ourServices/")}
             onClick={() => handleNavigate("/ourServices/")}
           >
             Layanan Kami
           </li>
           <li
-            className="hover:text-orange-500 py-2 cursor-pointer"
+            className={getLinkClass("/contactUs/")}
             onClick={() => handleNavigate("/contactUs/")}
           >
             Kontak Kami
