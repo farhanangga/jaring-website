@@ -176,7 +176,7 @@ export default function Navbar() {
             onClick={() => handleNavigate("/ourServices/")}
           >
             <span
-              className={`pb-1 border-b-2 ${
+              className={` border-b-2 ${
                 pathname === "/ourServices"
                   ? "border-orange-500 text-orange-500"
                   : "border-transparent"
