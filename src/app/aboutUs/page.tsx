@@ -59,8 +59,8 @@ export default function About() {
           <Image
             src="/img/au-bg-half-circle.png"
             alt="Background Circle"
-            width={400}
-            height={400}
+            width={600}
+            height={600}
             className="object-contain"
           />
         </div>

@@ -154,7 +154,7 @@ function OurServicesContent() {
       <Navbar />
 
       {/* HERO */}
-      <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-15 pt-38 md:pb-38 md:pt-60 px-4">
+      <div className="relative bg-[url('/img/brd-bg-1.png')] bg-cover bg-center text-white text-center pb-15 pt-38 md:pb-38 md:pt-60 px-6">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">LAYANAN KAMI</h1>
       </div>
 
@@ -180,7 +180,7 @@ function OurServicesContent() {
               <div className="flex items-center gap-5">
                 <Image src={srv.icon} alt={srv.name} width={50} height={50} />
                 <span
-                  className={`font-semibold ${
+                  className={`font-semibold max-w-30 md:max-w-100 ${
                     openService === srv.id
                       ? "text-orange-500"
                       : "text-gray-800"
@@ -192,7 +192,7 @@ function OurServicesContent() {
 
               {/* ARROW ICON */}
               <div
-                className={`w-9 h-9 flex items-center justify-center rounded-full border transition-all duration-300 ${
+                className={`w-9 h-9  flex items-center justify-center rounded-full border transition-all duration-300 ${
                   openService === srv.id
                     ? "border-orange-500 text-orange-500"
                     : "border-gray-400 text-gray-500"

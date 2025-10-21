@@ -12,12 +12,12 @@ export default function Home() {
       {/* ===================== KONTAK KAMI ===================== */}
       <div className="relative pt-28 md:pb-20 md:pt-28 md:px-6 md:px-10">
         {/* === IKON LINGKARAN DEKORATIF === */}
-        <div className="absolute top-0 right-0 w-[250px] md:w-[800px] opacity-20 pointer-events-none z-0">
+        <div className="absolute top-0 right-0 md:w-[800px] opacity-20 pointer-events-none z-0">
           <Image
             src="/img/cu-bg-half-circle.png"
             alt="Background Circle"
-            width={600}
-            height={600}
+            width={800}
+            height={800}
             className="object-contain"
           />
         </div>
@@ -31,7 +31,7 @@ export default function Home() {
         </p>
 
         {/* === WRAPPER GRID === */}
-        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[40%_60%] md:rounded-lg overflow-hidden shadow-md">
+        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[40%_60%] md:rounded-lg overflow-hidden md:shadow-xl">
           {/* === LEFT CONTACT INFO === */}
         <div className="bg-[#196CB4] text-white p-6 space-y-6 relative">
           {/* Alamat */}
@@ -103,7 +103,7 @@ export default function Home() {
         </div>
 
           {/* === RIGHT FORM === */}
-          <div className="bg-gray-50 p-6 shadow-md flex flex-col justify-between">
+          <div className="bg-white p-6 shadow-md flex flex-col justify-between">
             <div>
               <div className="flex flex-col sm:flex-row gap-8 mb-4">
                 <input type="text" placeholder="Nama Lengkap" className="sm:w-1/2 border border-gray-400 p-2" />

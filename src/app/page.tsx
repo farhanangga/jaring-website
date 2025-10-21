@@ -249,7 +249,7 @@ export default function Home() {
         </p>
 
         {/* Wrapper dengan rasio berbeda */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[40%_60%] md:rounded-lg overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[40%_60%] md:rounded-lg overflow-hidden md:shadow-xl">
           {/* === LEFT CONTACT INFO === */}
         <div className="bg-[#196CB4] text-white p-6 space-y-6 relative">
           {/* Alamat */}
@@ -321,7 +321,7 @@ export default function Home() {
         </div>
 
           {/* RIGHT FORM */}
-          <div className="bg-gray-50 p-6 shadow-md flex flex-col justify-between">
+          <div className="bg-white p-6 shadow-md flex flex-col justify-between">
             <div>
               <div className="flex flex-col sm:flex-row gap-8 mb-4">
                 <input type="text" placeholder="Nama Lengkap" className="sm:w-1/2 border border-gray-400 p-2 " />
