@@ -54,11 +54,11 @@ export default function Navbar() {
   // ======================================
   const getLinkClass = (path) => {
     const isActive = pathname === path;
-    if (path === "/" && isHome) return "cursor-pointer hover:text-orange-500"; // beranda tanpa border
-    return `cursor-pointer hover:text-orange-500 ${
+    if (path === "/" && isHome) return "cursor-pointer hover:text-orange-500";
+    return `cursor-pointer hover:text-orange-500 flex items-center gap-1 ${
       isActive
-        ? "text-orange-500 border-b-2 border-orange-500 pb-1"
-        : "border-b-2 border-transparent pb-1"
+        ? "text-orange-500" // hanya teks jadi oranye
+        : "text-inherit"
     }`;
   };
 
@@ -83,24 +83,50 @@ export default function Navbar() {
 
         {/* MENU DESKTOP */}
         <ul className="hidden md:flex space-x-8 font-medium">
-          <li
-            className={getLinkClass("/")}
-            onClick={() => handleNavigate("/")}
-          >
+          <li className={getLinkClass("/")} onClick={() => handleNavigate("/")}>
             Beranda
           </li>
+
           <li
             className={getLinkClass("/aboutUs")}
             onClick={() => handleNavigate("/aboutUs/")}
           >
             Tentang Kami
           </li>
+
+          {/* === LAYANAN KAMI === */}
           <li
-            className={getLinkClass("/ourServices")}
+            className="flex items-center gap-1 cursor-pointer hover:text-orange-500 group"
             onClick={() => handleNavigate("/ourServices/")}
           >
-            Layanan Kami
+            <span
+              className={` border-b-2 ${
+                pathname === "/ourServices"
+                  ? "border-orange-500 text-orange-500"
+                  : "border-transparent"
+              }`}
+            >
+              Layanan Kami
+            </span>
+
+            {/* Ikon dropdown — sejajar dengan teks */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-4 h-4 translate-y-[1px]"
+              style={{ color: "inherit" }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
           </li>
+
           <li
             className={getLinkClass("/contactUs")}
             onClick={() => handleNavigate("/contactUs/")}
@@ -131,15 +157,10 @@ export default function Navbar() {
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ${
           menuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-        } ${mobileMenuBgClass} ${
-          menuOpen ? "rounded-b-2xl" : "rounded-b-none"
-        }`}
+        } ${mobileMenuBgClass} ${menuOpen ? "rounded-b-2xl" : "rounded-b-none"}`}
       >
         <ul className="flex flex-col space-y-3 px-4 sm:px-6 py-3 font-medium text-sm sm:text-base">
-          <li
-            className={getLinkClass("/")}
-            onClick={() => handleNavigate("/")}
-          >
+          <li className={getLinkClass("/")} onClick={() => handleNavigate("/")}>
             Beranda
           </li>
           <li
@@ -148,12 +169,38 @@ export default function Navbar() {
           >
             Tentang Kami
           </li>
+
+          {/* Mobile versi Layanan Kami */}
           <li
-            className={getLinkClass("/ourServices/")}
+            className="flex items-center gap-1 cursor-pointer hover:text-orange-500 group"
             onClick={() => handleNavigate("/ourServices/")}
           >
-            Layanan Kami
+            <span
+              className={`pb-1 border-b-2 ${
+                pathname === "/ourServices"
+                  ? "border-orange-500 text-orange-500"
+                  : "border-transparent"
+              }`}
+            >
+              Layanan Kami
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-5 h-5 relative top-[1px]"
+              style={{ color: "inherit" }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
           </li>
+
           <li
             className={getLinkClass("/contactUs/")}
             onClick={() => handleNavigate("/contactUs/")}
