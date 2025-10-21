@@ -168,7 +168,7 @@ function OurServicesContent() {
           >
             {/* HEADER SERVICE */}
             <div
-              className={`flex justify-between items-center cursor-pointer px-6 py-6 transition-all ${
+              className={`flex justify-between items-center cursor-pointer px-2 md:px-6 py-6 transition-all ${
                 openService === srv.id
                   ? "bg-orange-50 border border-orange-200"
                   : "hover:bg-gray-50"
