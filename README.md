@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Jaring Website — Corporate Company Profile
 
-## Getting Started
+<p align="center">
+  <strong>Commitment, Integrity, Future.</strong>
+  <br />
+  A modern corporate website developed to showcase company information, digital solutions, business services, and professional identity.
+</p>
 
-First, run the development server:
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Jaring Website** is a corporate company profile website developed for **PT Jaring Solusi Aplikasi (Net2Software)**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The website serves as a digital platform to introduce the company, present its business solutions, showcase services, and provide communication channels for potential clients.
 
-## Learn More
+This project focuses on **Frontend Development**, translating UI/UX designs into a responsive and interactive web experience using modern frontend technologies.
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Homepage:** Corporate introduction and company identity.
+- **About Us:** Company profile and business overview.
+- **Business Models:** Presentation of business solutions and service models.
+- **Our Services:** Showcase of digital services and technology solutions.
+- **Certifications:** Display of company certifications.
+- **Contact Section:** Company contact information and inquiry form.
+- **Responsive Design:** Optimized interface for desktop and mobile devices.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
 
-## Deploy on Vercel
+| Technology | Purpose |
+|---|---|
+| Next.js | Frontend framework |
+| React.js | UI development |
+| TypeScript | Type-safe development |
+| Tailwind CSS | Styling and responsive layouts |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Development Focus
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Implemented responsive layouts and reusable components.
+- Translated UI/UX designs into functional web interfaces.
+- Developed structured corporate website sections.
+- Focused on visual consistency, usability, and accessibility.
+- Optimized the interface for different screen sizes.
+
+## 🚀 Live Demo
+
+**[Visit Jaring Website](https://jaring-website.vercel.app/)**
+
+## 👨‍💻 My Contribution
+
+**Frontend Developer — Internship Project**
+
+- Developed frontend interfaces for the corporate website.
+- Implemented responsive components using React and Tailwind CSS.
+- Translated design concepts into functional web pages.
+- Collaborated with the development team to deliver a consistent user experience.
+
+---
+
+<p align="center">
+  <strong>PT Jaring Solusi Aplikasi — Digital Solutions for a Better Future.</strong>
+  <br />
+  <sub>Built with modern frontend technologies.</sub>
+</p>
